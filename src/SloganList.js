@@ -5,7 +5,11 @@ export default function SloganList({ slogans }) {
   return (
     <section>
       <h2>Your slogans:</h2>
-      {props.slogans.map((slogan) => <Slogan />)}
+      {
+        slogans.map((slogan, i) => 
+          <Slogan key={slogan + i} slogan={slogan}/>
+        )
+      }
     </section>
   );
 }
